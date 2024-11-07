@@ -1,2 +1,2 @@
-# BeaufortShelfBreakout
-Detection and evaluation of midwinter landfast ice breakouts over the Alaska Beaufort Shelf
+# map_SatelliteImagery
+Scripts for mapping L1B satellite imagery
