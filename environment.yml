@@ -1,4 +1,4 @@
-name: map_SatelliteImagery
+name: map_Satelliteimagery
 channels:
   - conda-forge
   - defaults
@@ -63,11 +63,11 @@ dependencies:
   - bzip2=1.0.8=h6c40b1e_5
   - c-ares=1.19.1=h6c40b1e_0
   - c-blosc2=2.14.4=h0ae8482_1
-  - ca-certificates=2024.6.2=h8857fd0_0
+  - ca-certificates=2024.9.24=hecd8cb5_0
   - cached-property=1.5.2=py_0
   - cachetools=4.2.2=pyhd3eb1b0_0
-  - cartopy=0.23.0=py312h1171441_1
-  - certifi=2024.6.2=py312hecd8cb5_0
+  - cartopy=0.24.0=py312h98e817e_0
+  - certifi=2024.8.30=py312hecd8cb5_0
   - cffi=1.16.0=py312h6c40b1e_0
   - cfitsio=3.470=hbd21bf8_7
   - cftime=1.6.2=py312h32608ca_1
@@ -211,6 +211,7 @@ dependencies:
   - libgettextpo=0.22.5=h5ff76d1_2
   - libgettextpo-devel=0.22.5=h5ff76d1_2
   - libgfortran=5.0.0=13_2_0_h97931a8_3
+  - libgfortran-ng=3.0.1=h93005f0_2
   - libgfortran5=13.2.0=h2873a65_3
   - libglib=2.78.4=h19e1a8f_0
   - libiconv=1.17=hd75f5a5_2
@@ -279,9 +280,10 @@ dependencies:
   - numpy-base=1.26.4=py312hbb3573c_0
   - numpydoc=1.5.0=py312hecd8cb5_0
   - oniguruma=6.9.7.1=h9ed2024_0
+  - openblas=0.3.1=hd130d23_0
   - openjpeg=2.4.0=h66ea3da_0
   - openpyxl=3.0.10=py312h6c40b1e_0
-  - openssl=3.3.1=h87427d6_0
+  - openssl=3.3.2=hd23fc13_0
   - orc=1.7.4=h995b336_1
   - overrides=7.4.0=py312hecd8cb5_0
   - packaging=23.2=py312hecd8cb5_0
@@ -477,4 +479,4 @@ dependencies:
   - zope=1.0=py312hecd8cb5_1
   - zope.interface=5.4.0=py312h6c40b1e_0
   - zstd=1.5.5=hc035e20_0
-prefix: /opt/anaconda3/envs/map_SatelliteImagery
+prefix: /opt/anaconda3/envs/map_Satelliteimagery

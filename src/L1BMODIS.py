@@ -201,7 +201,7 @@ Latest recorded update:
     
     return geolon, geolat
 
-def load_MODIS1KMband(file, band: int, apply_mask = False):
+def load_MODIS1KMband(file, band: int, apply_scaling = True, apply_mask = False):
 
     """Load a band from L1B 1km MODIS imagery (MD021KM/MYD021KM). Applies scale factor and offsets,
     makes mask for invalid/missing data values. Uses pyhdf.SD module.
@@ -210,6 +210,7 @@ INPUT:
 - file: filename with directory 
         (e.g. '/Users/kenzie/MOD021KM.A2000066.2255.061.2017171220013.hdf')
 - band: band number (int) (reference: https://modis.gsfc.nasa.gov/about/specifications.php)
+- apply_scaling: apply scaling to data (True/False)
 - apply_mask: apply mask to data (True/False)
 """
     # open file
@@ -221,12 +222,15 @@ INPUT:
     # grab band data
     band_data = hdf.select(FIELD)[:][INDEX, :, :].astype(np.double)
 
-    # grabd scaling info
-    scaling = grab_scaling(hdf, FIELD, INDEX)
+    if apply_scaling:
+        # grabd scaling info
+        scaling = grab_scaling(hdf, FIELD, INDEX)
 
-    # mask bad data
-    scaled_data = mask_bad_data(band_data, scaling, apply_mask = apply_mask)
+        # mask bad data
+        scaled_data = mask_bad_data(band_data, scaling, apply_mask = apply_mask)
 
+    else:
+        scaled_data = band_data
     # load data coordinates
     # latitude, longitude = load_coords(hdf) # these are at 5 km res for some reason?
 
